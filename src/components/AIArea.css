@@ -1,0 +1,228 @@
+/* AI & GenAI Section - Light Theme */
+.aiarea {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.aiarea__bg-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(79, 70, 229, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Path Section */
+.aiarea__path-section {
+  margin-bottom: 50px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  overflow-x: auto;
+}
+
+.aiarea__path-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 24px;
+}
+
+.aiarea__path {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+
+.aiarea__path-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.aiarea__path-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-med);
+  cursor: default;
+  min-width: 120px;
+  text-align: center;
+}
+
+.aiarea__path-node:hover {
+  background: #ffffff;
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
+}
+
+.aiarea__path-icon {
+  font-size: 1.5rem;
+}
+
+.aiarea__path-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.aiarea__path-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.aiarea__path-arrow {
+  padding: 0 8px;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+/* Cards Grid */
+.aiarea__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.aiarea__card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  transition: all var(--transition-med);
+  position: relative;
+  overflow: hidden;
+}
+
+.aiarea__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-color, var(--color-primary));
+}
+
+.aiarea__card:hover,
+.aiarea__card--active {
+  background: #ffffff;
+  border-color: var(--card-color, var(--color-primary));
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.09);
+  transform: translateY(-4px);
+}
+
+.aiarea__card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.aiarea__card-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.aiarea__card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.aiarea__card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.aiarea__card-tagline {
+  font-size: 0.78rem;
+  color: var(--card-color, var(--color-primary));
+  font-weight: 600;
+}
+
+.aiarea__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height var(--transition-slow), opacity var(--transition-med);
+  opacity: 0;
+}
+
+.aiarea__card--active .aiarea__card-body {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.aiarea__card-explanation {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.aiarea__card-usecase {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.aiarea__card-usecase-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.aiarea__card-usecase p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .aiarea__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .aiarea__cards {
+    grid-template-columns: 1fr;
+  }
+  .aiarea__path-section {
+    padding: 20px 16px;
+  }
+}

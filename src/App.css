@@ -1,0 +1,22 @@
+/* App.css - Light Theme Section Alternating */
+
+/* Section alternating backgrounds */
+#about,
+#projects,
+#education,
+#hire-me,
+#contact {
+  background: var(--bg-secondary);
+}
+
+#skills,
+#experience,
+#certifications,
+#home {
+  background: var(--bg-primary);
+}
+
+/* Subtle section divider */
+section + section {
+  border-top: 1px solid var(--border-color);
+}
