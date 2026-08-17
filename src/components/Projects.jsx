@@ -67,7 +67,7 @@ const projects = [
     icon: TrendingUp,
     iconColor: '#10b981',
     gradient: 'linear-gradient(135deg, rgba(16,185,129,0.12), rgba(34,211,238,0.08))',
-    image: 'public/AI-Movie Recommendation.png',
+    image: '/AI-Movie Recommendation.png',
     tags: ['Python', 'NLP', 'Sentence Transformers', 'Cosine Similarity', 'Gradio', 'Pandas', 'NumPy'],
     categories: ['ai-ml'],
     features: [
