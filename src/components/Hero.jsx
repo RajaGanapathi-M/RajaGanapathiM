@@ -186,7 +186,7 @@ export default function Hero() {
             <div className="hero__image-ring" />
             <div className="hero__image-card glass-card">
               <img
-                src="/rg_profile.png"
+                src="/Rg_Pic.png"
                 alt="Raja Ganapathi M"
                 className="hero__profile-img"
               />
