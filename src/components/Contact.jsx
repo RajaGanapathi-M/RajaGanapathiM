@@ -120,7 +120,7 @@ export default function Contact() {
           <div className="contact__info reveal reveal-delay-1">
             <div className="contact__profile glass-card">
               <div className="contact__avatar">
-                <img src="./src/assets/Rg Pic.png" alt="Profile" />
+                <img src="/Rg_Pic.png" alt="Profile" />
               </div>
               <h3>Raja Ganapathi M</h3>
               <p>AI &amp; Frontend Developer</p>

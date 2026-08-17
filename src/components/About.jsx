@@ -34,7 +34,7 @@ export default function About() {
               <div className="about__avatar-ring" aria-hidden="true" />
               <div className="about__avatar-inner">
                 <img
-                  src="src\assets\Rg Pic.png"
+                  src="/Rg_Pic.png"
                   alt="Raja Ganapathi M Profile"
                   className="about__avatar-img"
                   onError={(e) => {

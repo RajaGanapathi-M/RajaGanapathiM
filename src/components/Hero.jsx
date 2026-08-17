@@ -150,7 +150,7 @@ export default function Hero() {
             </button>
 
             <a
-              href="public/Raja Ganapathi M_Resume.pdf"
+              href="/Raja%20Ganapathi%20M_Resume.pdf"
               download="Raja_Ganapathi_M_Resume.pdf"
               className="btn btn-ghost"
               aria-label="Download resume"
@@ -186,7 +186,7 @@ export default function Hero() {
             <div className="hero__image-ring" />
             <div className="hero__image-card glass-card">
               <img
-                src="public/rg_profile.png"
+                src="/rg_profile.png"
                 alt="Raja Ganapathi M"
                 className="hero__profile-img"
               />
